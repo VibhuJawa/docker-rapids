@@ -7,7 +7,7 @@ git clone --recurse-submodules https://github.com/kkraus14/cudf -b fea-ext-strin
 
 # git clone --recurse-submodules https://github.com/rapidsai/cuml -b branch-0.6
 
-git clone --recurse-submodules https://github.com/rapidsai/cugraph -b branch-0.6
+# git clone --recurse-submodules https://github.com/rapidsai/cugraph -b branch-0.6
 
 git clone --recurse-submodules https://github.com/rapidsai/dask-cuda
 git clone --recurse-submodules https://github.com/rapidsai/dask-cudf
@@ -21,5 +21,9 @@ git clone --recurse-submodules https://github.com/rapidsai/dask-cudf
 #git clone --recurse-submodules https://github.com/dmlc/xgboost
 #cd xgboost && git submodule update --init --recursive -- dmlc-core
 
+echo "All repos Cloned"
+
+
 cd ..
 docker build -t rapids-strings .
+echo "Docker build Complted"
