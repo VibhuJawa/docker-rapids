@@ -23,7 +23,5 @@ git clone --recurse-submodules https://github.com/rapidsai/dask-cudf
 
 echo "All repos Cloned"
 
-
-cd ..
 docker build -t rapids-strings .
 echo "Docker build Complted"
