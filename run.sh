@@ -1,4 +1,4 @@
-docker run  -p 8888:8888 -p 8787:8787 \
+docker run  -p 7888:7888 -p 7787:7787 \
     -v /data:/data \
     -v /home/dev/projects/dev-notebooks:/notebooks \
     -it rapids-strings
