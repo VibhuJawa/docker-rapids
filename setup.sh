@@ -10,7 +10,7 @@ git clone --recurse-submodules https://github.com/kkraus14/cudf -b fea-ext-strin
 # git clone --recurse-submodules https://github.com/rapidsai/cugraph -b branch-0.6
 
 git clone --recurse-submodules https://github.com/rapidsai/dask-cuda
-git clone --recurse-submodules https://github.com/rapidsai/dask-cudf
+git clone --recurse-submodules --single-branch --branch fea-ext-parquet-reader https://github.com/j-ieong/cudf.git
 
 # git clone --recurse-submodules https://github.com/rapidsai/dask-xgboost
 
