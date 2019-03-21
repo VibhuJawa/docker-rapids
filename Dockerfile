@@ -135,9 +135,9 @@ RUN source activate ${CONDA_ENV} && \
 #     python setup.py build_ext --inplace && \
 #     python setup.py install
 
-ADD cugraph/python /cugraph/python
-WORKDIR /cugraph/python
-RUN source activate ${CONDA_ENV} && python setup.py install
+# ADD cugraph/python /cugraph/python
+# WORKDIR /cugraph/python
+# RUN source activate ${CONDA_ENV} && python setup.py install
 
 # doc builds
 ADD custrings/docs /custrings/docs
@@ -157,5 +157,5 @@ RUN source activate ${CONDA_ENV} && python setup.py install
 
 #WORKDIR /cudf/docs
 #CMD source activate ${CONDA_ENV} && make html && cd build/html && python -m http.server
-WORKDIR /notebooks
-CMD source activate ${CONDA_ENV} && jupyter-lab  —p 7888 --allow-root --ip='0.0.0.0' --no-browser --NotebookApp.token=''
+WORKDIR /rapids
+CMD source activate ${CONDA_ENV} && jupyter-lab  —p 9888 --allow-root --ip='0.0.0.0' --no-browser --NotebookApp.token=''
