@@ -41,5 +41,5 @@ git clone --recurse-submodules https://github.com/rapidsai/dask-cuda
 #git clone  https://github.com/dmlc/xgboost
 #cd xgboost && git submodule update --init --recursive -- dmlc-core
 
-cd ..
+# cd ..
 docker build -t rapids .
