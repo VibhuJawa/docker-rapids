@@ -2,15 +2,14 @@ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 git clone --recurse-submodules https://github.com/rapidsai/custrings
 #git clone --recurse-submodules https://github.com/rapidsai/cudf
-# cloning directly from strings WIP pr
-git clone --recurse-submodules https://github.com/kkraus14/cudf -b fea-ext-string-support
+
+# cloning directly from fea-ext-parquet-reader pr
+git clone --recurse-submodules --single-branch --branch fea-ext-parquet-reader https://github.com/j-ieong/cudf.git
 
 # git clone --recurse-submodules https://github.com/rapidsai/cuml -b branch-0.6
-
 # git clone --recurse-submodules https://github.com/rapidsai/cugraph -b branch-0.6
 
 git clone --recurse-submodules https://github.com/rapidsai/dask-cuda
-git clone --recurse-submodules --single-branch --branch fea-ext-parquet-reader https://github.com/j-ieong/cudf.git
 
 # git clone --recurse-submodules https://github.com/rapidsai/dask-xgboost
 
