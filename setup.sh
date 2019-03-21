@@ -6,6 +6,10 @@ git clone --recurse-submodules https://github.com/rapidsai/custrings
 # cloning directly from fea-ext-parquet-reader pr
 git clone --recurse-submodules --single-branch --branch fea-ext-parquet-reader https://github.com/j-ieong/cudf.git
 
+
+# git clone dask cudf
+git clone ----recurse-submodules  https://github.com/rapidsai/dask-cudf.git
+
 # git clone --recurse-submodules https://github.com/rapidsai/cuml -b branch-0.6
 # git clone --recurse-submodules https://github.com/rapidsai/cugraph -b branch-0.6
 
