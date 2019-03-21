@@ -142,8 +142,8 @@ RUN source activate ${CONDA_ENV} && \
 # doc builds
 ADD custrings/docs /custrings/docs
 ADD cudf/docs /cudf/docs
-ADD cuml/docs /cuml/docs
-ADD cugraph/docs /cugraph/docs
+# ADD cuml/docs /cuml/docs
+# ADD cugraph/docs /cugraph/docs
 
 # install dask-cuda
 ADD dask-cuda /dask-cuda
