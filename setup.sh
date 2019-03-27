@@ -1,19 +1,11 @@
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
-git clone --recurse-submodules https://github.com/rapidsai/custrings
-#git clone --recurse-submodules https://github.com/rapidsai/cudf
-
-
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-
 git clone https://github.com/rapidsai/custrings -b branch-0.3
 cd custrings
 git submodule update --init --recursive
 cd ..
 
-
-# cloning directly from fea-ext-parquet-reader pr
-git clone https://github.com/rapidsai/cudf.git --branch branch-0.6
+git clone https://github.com/rapidsai/cudf -b branch-0.6
 cd cudf
 git submodule update --init --recursive
 cd ..
@@ -34,12 +26,17 @@ cd dask-cudf
 sed -i 1d requirements.txt
 cd ..
 
-git clone --recurse-submodules https://github.com/rapidsai/dask-cuml
-git clone --recurse-submodules https://github.com/rapidsai/dask-cuda
+# git clone --recurse-submodules https://github.com/rapidsai/dask-cuml
+# git clone --recurse-submodules https://github.com/rapidsai/dask-cuda
+# git clone --recurse-submodules https://github.com/rapidsai/dask-xgboost
+
+
+# git clone --recursive https://github.com/rapidsai/xgboost -b cudf-interop rapidsai-xgboost
+# cd rapidsai-xgboost && git submodule update --init --recursive -- dmlc-core
 
 #git clone --recursive https://github.com/dmlc/xgboost.git
 #git clone  https://github.com/dmlc/xgboost
 #cd xgboost && git submodule update --init --recursive -- dmlc-core
-
+# cd ..
 
 docker build -t rapids .
