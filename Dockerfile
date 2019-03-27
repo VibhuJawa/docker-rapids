@@ -67,23 +67,23 @@ ENV CXX=/usr/bin/g++-${CXX}
 # WORKDIR /dask-xgboost
 # RUN source activate ${CONDA_ENV} && python setup.py install
 
-ADD custrings/cpp /custrings/cpp
-ADD custrings/LICENSE /custrings/LICENSE
-ADD custrings/thirdparty /custrings/thirdparty
+# ADD custrings/cpp /custrings/cpp
+# ADD custrings/LICENSE /custrings/LICENSE
+# ADD custrings/thirdparty /custrings/thirdparty
 
 # Build/install custrings
-ENV CMAKE_CXX11_ABI=ON
-RUN source activate ${CONDA_ENV} && \
-    mkdir -p /custrings/cpp/build && \
-    cd /custrings/cpp/build && \
-    cmake .. -DCMAKE_INSTALL_PREFIX=${CONDA_PREFIX} -DCMAKE_CXX11_ABI=ON && \
-    make -j install
+# ENV CMAKE_CXX11_ABI=ON
+# RUN source activate ${CONDA_ENV} && \
+#    mkdir -p /custrings/cpp/build && \
+#    cd /custrings/cpp/build && \
+#    cmake .. -DCMAKE_INSTALL_PREFIX=${CONDA_PREFIX} -DCMAKE_CXX11_ABI=ON && \
+#    make -j install
 #WORKDIR /custrings/cpp
 #RUN source activate ${CONDA_ENV} && \
 #    make -f Makefile.with_python
-ADD custrings/python /custrings/python
-WORKDIR /custrings/python
-RUN source activate ${CONDA_ENV} && python setup.py install
+# ADD custrings/python /custrings/python
+# WORKDIR /custrings/python
+# RUN source activate ${CONDA_ENV} && python setup.py install
 
 # build/install libcudf
 ADD cudf/thirdparty /cudf/thirdparty
@@ -140,7 +140,7 @@ RUN source activate ${CONDA_ENV} && \
 # RUN source activate ${CONDA_ENV} && python setup.py install
 
 # doc builds
-ADD custrings/docs /custrings/docs
+# ADD custrings/docs /custrings/docs
 ADD cudf/docs /cudf/docs
 # ADD cuml/docs /cuml/docs
 # ADD cugraph/docs /cugraph/docs
