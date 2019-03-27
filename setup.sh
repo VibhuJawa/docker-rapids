@@ -13,20 +13,20 @@ cd ..
 
 
 # cloning directly from fea-ext-parquet-reader pr
-git clone --branch fea-ext-parquet-reader https://github.com/j-ieong/cudf.git
+git clone https://github.com/rapidsai/cudf.git --branch branch-0.6
 cd cudf
 git submodule update --init --recursive
 cd ..
 
-git clone https://github.com/rapidsai/cuml -b branch-0.6
-cd cuml
-git submodule update --init --recursive
-cd ..
+# git clone https://github.com/rapidsai/cuml -b branch-0.6
+# cd cuml
+# git submodule update --init --recursive
+# cd ..
 
-git clone https://github.com/rapidsai/cugraph -b branch-0.6
-cd cugraph
-git submodule update --init --recursive
-cd ..
+# git clone https://github.com/rapidsai/cugraph -b branch-0.6
+# cd cugraph
+# git submodule update --init --recursive
+# cd ..
 
 git clone --recurse-submodules https://github.com/rapidsai/dask-cudf
 cd dask-cudf
@@ -41,5 +41,5 @@ git clone --recurse-submodules https://github.com/rapidsai/dask-cuda
 #git clone  https://github.com/dmlc/xgboost
 #cd xgboost && git submodule update --init --recursive -- dmlc-core
 
-# cd ..
+
 docker build -t rapids .
